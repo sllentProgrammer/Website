@@ -1,5 +1,6 @@
 var projectsVar = false;
-var projectsText;
+var AItext;
+var BEARtext
 var AIGameD = 0;
 
 function projectsText() {
@@ -14,18 +15,34 @@ function projectsText() {
 
 function projectsClicked() {
   if(projectsVar == false) {
-      projectsText = createButton("AI Game");
-      projectsText.position(0, 250);
-      projectsText.style('font-size', '65');
-      projectsText.mousePressed(AIgame);
+      AItext = createButton("AI Game");
+      AItext.position(0, 250);
+      AItext.style('font-size', '65');
+      AItext.mousePressed(AIgame);
       projectsVar = true;
 } else {
-  projectsText.remove();
+  AItext.remove();
   projectsVar = false;
+}
+
+if(projectsVar == false) {
+    BEARtext = createButton("bear Clicker");
+    BEARtext.position(0, 350);
+    BEARtext.style('font-size', '65');
+    BEARtext.mousePressed(BEARgame);
+    projectsVar = true;
+} else {
+AItext.remove();
+projectsVar = false;
 }
 }
 
 function AIgame() {
   //saveJSON(data, 'data.json');
   window.location.href = "http://sllentProgrammer.github.io/AIGame/";
+}
+
+function BEARgame() {
+  //saveJSON(data, 'data.json');
+  window.location.href = "http://sllentProgrammer.github.io/bearClicker/";
 }
