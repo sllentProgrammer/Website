@@ -1,29 +1,27 @@
 
 
 function setup() {
-  createCanvas(windowHeight, windowWidth);
+  createCanvas(windowWidth, windowHeight);
+
+  homeText();
+  projectsText();
+  socialText();
 }
 
 function draw() {
   background(51);
-  show();
+
+  createHeader();
+  ////////////////////////
 }
 
 function windowResized() {
-  resizeCanvas(windowHeight, windowWidth);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
-function mousePressed() {
-  var d = dist(mouseX, mouseY, width/2, height/2);
 
-  if(d < 150) {
-  if(bool == false) {
-    bool = true;
-    cookies = cookies + 1;
-  } else {
-    bool = false;
-    cookies = cookies + 1;    
-  }
-    console.log("pressed");
-  }
+function createHeader() {
+  fill(66, 107, 244);
+  noStroke();
+  rect(0, 0, 5000, 160);
 }
