@@ -3,7 +3,6 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  homeText();
   projectsText();
   socialText();
 }
