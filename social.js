@@ -3,12 +3,12 @@ var socialText;
 
 function socialText() {
   //text
-  var social = createButton("social media");
-  social.position(700, 50);
-  social.style('font-size', '65');
-  social.mousePressed(socialClicked);
-  //homeText.mousePressed(home);
-  //textFont("LeagueGothic-CondensedRegular");
+  var twitter = createButton("social media");
+  twitter.position(700, 50);
+  twitter.style('font-size', '65');
+  twitter.mousePressed(socialClicked);
+
+
 }
 
 function socialClicked() {
